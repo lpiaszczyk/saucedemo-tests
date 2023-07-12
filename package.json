@@ -1,0 +1,14 @@
+{
+  "name": "saucedemo-tests",
+  "version": "1.0.0",
+  "description": "Example tests for saucedemo.com",
+  "main": "index.js",
+  "scripts": {},
+  "author": "lukasz piaszczyk",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.0",
+    "playwright": "^1.36.0",
+    "typescript": "^5.1.6"
+  }
+}
