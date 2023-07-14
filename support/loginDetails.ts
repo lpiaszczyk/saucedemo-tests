@@ -11,6 +11,11 @@ export const loginDetails_workingUsers: User[] = [
     }
 ]
 
+export const loginDetails_lockedUser: User = {
+    username: "locked_out_user",
+    password: commonPassword
+}
+
 export type User = {
     username: string,
     password: string
