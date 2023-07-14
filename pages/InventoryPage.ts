@@ -4,7 +4,7 @@ export class InventoryPage {
     constructor(public readonly page: Page) { }
 
     async goto() {
-        await this.page.goto('/');
+        await this.page.goto('/inventory.html');
     }
 
     async addToCart(locator: string) {

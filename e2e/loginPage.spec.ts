@@ -4,7 +4,7 @@ import { loginDetails_lockedUser, loginDetails_workingUsers } from '../support/l
 test.describe('Login form', () => {
     test('shows error on invalid login details', async ({ loginPage }) => {
         await loginPage.goto();
-        await loginPage.login({ username: loginDetails_workingUsers[0].username, password: 'invalid' });
+        await loginPage.login({ username: loginDetails_workingUsers[0].username, password: 'invalid', authFilePath: "" });
         await expect(loginPage.usernameInput).toHaveAttribute('class', /error$/)
         await expect(loginPage.passwordInput).toHaveAttribute('class', /error$/);
         await expect(loginPage.errorMsg).toHaveText('Epic sadface: Username and password do not match any user in this service')
