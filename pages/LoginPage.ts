@@ -2,9 +2,9 @@ import type { Page, Locator } from '@playwright/test';
 import { User } from '../support/loginDetails';
 
 export class LoginPage {
-  private readonly usernameInput: Locator;
-  private readonly passwordInput: Locator;
-  private readonly loginButton: Locator;
+  readonly usernameInput: Locator;
+  readonly passwordInput: Locator;
+  readonly loginButton: Locator;
 
   constructor(public readonly page: Page) {
     this.usernameInput = this.page.locator('[data-test="username"]');
