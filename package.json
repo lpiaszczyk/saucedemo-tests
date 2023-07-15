@@ -2,8 +2,12 @@
   "name": "saucedemo-tests",
   "version": "1.0.0",
   "description": "Example tests for saucedemo.com",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:all": "npx playwright test",
+    "test:e2e": "npx playwright test --grep \"@e2e\"",
+    "test:pages": "npx playwright test --grep-invert \"@e2e\"",
+    "test:report": "npx playwright show-report"
+  },
   "author": "lukasz piaszczyk",
   "license": "ISC",
   "devDependencies": {

@@ -4,7 +4,7 @@ import { loginDetails_workingUsers } from '../support/loginDetails';
 
 test.describe("Saucedemo website", () => {
   for (const user of loginDetails_workingUsers) {
-    test(`user ${user.username} can purchase items`, async ({ loginPage, inventoryPage, header, cartPage, checkoutOne, checkoutTwo, checkoutCompleted }) => {
+    test(`user ${user.username} can purchase items @e2e`, async ({ loginPage, inventoryPage, header, cartPage, checkoutOne, checkoutTwo, checkoutCompleted }) => {
       await loginPage.goto();
       await loginPage.login(user);
       await inventoryPage.addToCart(InventoryItemLocator['Sauce Labs Backpack']);
